@@ -13,11 +13,11 @@ XSRF_TOKEN = os.environ.get("XSRF_TOKEN","")
 # start
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "Available Sites \n /af - Adfly \n /gp - gplinks \n /dl - droplink \n /lv - linkvertise \n \
-/md - mdisk \n /rl - rocklinks \n /pd - pixeldrain \n /wt - wetransfer \n /mu - megaup \n /gd - Drive Look-Alike (/gdlist) \n \
-/ot - others (/otlist) \n /ou - ouo \n /gt - gdtot \n /sh -  sharer \n /ps - psa \n /go - gofile \n /st - shorte \n \
-/pi - pixl \n /an - anonfiles \n /gy - gyanilinks \n /sg - shortingly \n /su - shareus \n /db - dropbox \n /fc - filecrypt \n \
-/zs - zippyshare \n /mf - mediafire")
+    bot.reply_to(message, "Available Sites : \n /af - Adfly \n /gp - Gplinks \n /dl - Droplinks \n /lv - Linkvertise \n \
+/md - Mdisk \n /rl - Rocklinks \n /pd - PixelDrain \n /wt - WeTransfer \n /mu - Megaup \n /gd - Drive Look-Alike (/gdlist) \n \
+/ot - Others (/otlist) \n /ou - Ouo \n /gt - GdToT \n /sh -  Sharer \n /ps - PSA \n /go - Gofile \n /st - Shorte \n \
+/pi - Pixl \n /an - AnonFiles \n /gy - Gyanilinks \n /sg - Shortingly \n /su - Shareus \n /db - Dropbox \n /fc - Filecrypt \n \
+/zs - Zippyshare \n /mf - Mediafire")
 
 
 # mediafire
@@ -28,7 +28,7 @@ def mf(message):
     except:
         bot.reply_to(message, "Invalid format, /xx link")
         return
-    print("You Have Entered mediafire:",url)
+    print("You Have Entered MediaFire :",url)
     msg = bot.reply_to(message, "bypassing...")
     link = bypasser.mediafire(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
@@ -40,10 +40,10 @@ def zs(message):
     try:
         url = message.text.split("/zs ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered zippyshare:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Zippyshare :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.zippyshare(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -54,10 +54,10 @@ def fc(message):
     try:
         url = message.text.split("/fc ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered filecrypt:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Filecrypt :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.filecrypt(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -68,10 +68,10 @@ def db(message):
     try:
         url = message.text.split("/db ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered dropbox:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Dropbox :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.dropbox(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -82,10 +82,10 @@ def su(message):
     try:
         url = message.text.split("/su ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered shareus:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Shareus :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.shareus(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -96,10 +96,10 @@ def sg(message):
     try:
         url = message.text.split("/sg ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered shortingly:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Shortingly :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.shortlingly(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -110,10 +110,10 @@ def gy(message):
     try:
         url = message.text.split("/gy ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered gyanilinks:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Gyanilinks :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.gyanilinks(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -124,10 +124,10 @@ def an(message):
     try:
         url = message.text.split("/an ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered anonfiles:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered AnonFiles :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.anonfile(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -138,10 +138,10 @@ def pi(message):
     try:
         url = message.text.split("/pi ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered pixl:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Pixl :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.pixl(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -152,10 +152,10 @@ def st(message):
     try:
         url = message.text.split("/st ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered shorte:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered shorte :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.sh_st_bypass(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -166,10 +166,10 @@ def go(message):
     try:
         url = message.text.split("/go ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered gofile:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Gofile :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.gofile_dl(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -180,10 +180,10 @@ def ps(message):
     try:
         url = message.text.split("/ps ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered psa:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered PSA :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     links = bypasser.psa_bypasser(url)
     bot.edit_message_text(links, msg.chat.id, msg.id)
 
@@ -198,10 +198,10 @@ def sh(message):
     try:
         url = message.text.split("/sh ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("Entered Link sharer:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("Entered Link Sharer :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.sharer_pw(url, Laravel_Session, XSRF_TOKEN)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -212,10 +212,10 @@ def gt(message):
     try:
         url = message.text.split("/gt ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("Entered Link gdtot:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("Entered Link GdToT :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.gdtot(url,GDTot_Crypt)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -226,10 +226,10 @@ def af(message):
     try:
         url = message.text.split("/af ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered adfly:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered AdFly :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     out = bypasser.adfly(url)
     link = out['bypassed_url']
     try:    
@@ -244,10 +244,10 @@ def gp(message):
     try:
         url = message.text.split("/gp ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("Entered Link gplink:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("Entered Link GpLinks :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.gplinks(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -258,10 +258,10 @@ def dp(message):
     try:
         url = message.text.split("/dl ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered droplink:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Droplinks :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.droplink(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
    
@@ -272,10 +272,10 @@ def lv(message):
     try:
         url = message.text.split("/lv ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered linkvertise:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Linkvertise :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.linkvertise(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -286,10 +286,10 @@ def md(message):
     try:
         url = message.text.split("/md ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered mdisk:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Mdisk :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.mdisk(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -300,10 +300,10 @@ def rl(message):
     try:
         url = message.text.split("/rl ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered rocklinks:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Rocklinks :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.rocklinks(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -314,10 +314,10 @@ def pd(message):
     try:
         url = message.text.split("/pd ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered pixeldrain:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered PixelDrain :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.pixeldrain(url)
     bot.edit_message_text(link, msg.chat.id, msg.id) 
    
@@ -328,10 +328,10 @@ def wt(message):
     try:
         url = message.text.split("/wt ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered wetransfer:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered WeTransfer :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.wetransfer(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)   
 
@@ -342,10 +342,10 @@ def mu(message):
     try:
         url = message.text.split("/mu ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered megaup:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Megaup :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.megaup(url)
     bot.edit_message_text(link, msg.chat.id, msg.id)
 
@@ -356,10 +356,10 @@ def ou(message):
     try:
         url = message.text.split("/ou ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered ouo:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Ouo :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.ouo(url)
     bot.edit_message_text(link, msg.chat.id, msg.id) 
 
@@ -370,10 +370,10 @@ def gd(message):
     try:
         url = message.text.split("/gd ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
-    print("You Have Entered gdrive:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    print("You Have Entered Gdrive :",url)
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.unified(url)
     bot.edit_message_text(link, msg.chat.id, msg.id) 
 
@@ -401,10 +401,10 @@ def ot(message):
     try:
         url = message.text.split("/ot ")[1]
     except:
-        bot.reply_to(message, "Invalid format, /xx link")
+        bot.reply_to(message, "Invalid Format, /xx link")
         return
     print("You Have Entered others:",url)
-    msg = bot.reply_to(message, "bypassing...")
+    msg = bot.reply_to(message, "Bypassing...⏳")
     link = bypasser.others(url)
     bot.edit_message_text(link, msg.chat.id, msg.id) 
 
